@@ -10,5 +10,31 @@ public class PracticeLoop1 {
                 System.out.print(i+" ");
             }
         }
+
+        System.out.println("----------");
+        int num2 = s.nextInt();
+        int sum=0;
+        int count = 0;
+        for(int k=0;k<=num2;k++){
+            if(k%3==0 && k%4==0){
+                sum +=k;
+                count++;
+            }
+        }
+        System.out.println("avg "+sum/count);
+
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
