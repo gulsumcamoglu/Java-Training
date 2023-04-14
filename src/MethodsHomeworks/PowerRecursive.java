@@ -1,7 +1,6 @@
 package MethodsHomeworks;
-import java.sql.SQLOutput;
 import java.util.Scanner;
-public class Power {
+public class PowerRecursive {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         System.out.print("Enter 0 for quit!! ");
