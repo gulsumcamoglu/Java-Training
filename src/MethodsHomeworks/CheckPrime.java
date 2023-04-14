@@ -1,15 +1,24 @@
 package MethodsHomeworks;
+import java.util.Objects;
 import java.util.Scanner;
 public class CheckPrime {
     public static void main(String[] args) {
-        System.out.print("Enter an integer number");
+
         Scanner s = new Scanner(System.in);
-        int num = s.nextInt();
-        while (num%1==0){
+        int num;
+
+        do {
+            System.out.println("Enter an integer number");
+            num = s.nextInt();
             if (prime(num)) System.out.println(num+ " is prime");
             else System.out.println(num+" is not prime");
-            System.out.print("Enter an integer number");
-            num = s.nextInt();
+        }
+        while (s.hasNextInt());
+
+
+
+        if (!s.hasNextInt()){
+            System.out.println("Please enter int number!!");
         }
     }
 
