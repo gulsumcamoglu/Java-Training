@@ -10,6 +10,55 @@ public class Arrays {
         System.out.print("Enter a Number: ");
         int num = s.nextInt();
         MinandMax(arr,num);
+
+        // Creating Letter A with Stars and 2-Dim Array
+        String[][] letterA = new String[6][4];
+        for (int i=0;i<letterA.length;i++){
+            for (int j=0;j<letterA[i].length;j++){
+                if (i==0 || i==2) letterA[i][j]=" * ";
+                else if (j==0 || j==3) letterA[i][j]=" * ";
+                else letterA[i][j]="   ";
+            }
+        }
+        for (String[] row : letterA){
+            for (String col : row){
+                System.out.print(col);
+            }
+            System.out.println();
+        }
+
+        // Creating Letter A with Stars and 2-Dim Array
+        /**
+        * * *
+        *     *
+        * * *
+        * * *
+        *     *
+        * * *
+         */
+        String[][] letterB = new String[6][4];
+        for (int i=0;i<letterB.length;i++){
+            for (int j=0;j<letterB[i].length;j++){
+                if (j==0) letterB[i][j]=" * ";
+                else if (j==1 || j==2){
+                    if (i==0 || i==2 || i==3 || i==5) letterB[i][j]=" * ";
+                    else letterB[i][j]="   ";
+                }
+                else if (j==3){
+                    if (i==1 || i==4) letterB[i][j]=" * ";
+                    else letterB[i][j]="   ";
+                }else letterB[i][j]="   ";
+            }
+        }
+
+        for (String[] row : letterB){
+            for (String col : row){
+                System.out.print(col);
+            }
+            System.out.println();
+        }
+
+
     }
 
     public static void MinandMax(int[] arr,int num){
