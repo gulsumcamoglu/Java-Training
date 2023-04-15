@@ -1,9 +1,7 @@
 package Arrays;
-import java.sql.SQLOutput;
-import java.util.Scanner;
-import BoxerGame.Match;
+import java.util.*;
 
-public class Arrays {
+public class ArraysPratik {
     public static void main(String[] args) {
         int[] arr = {1,2,3,4,5,6,7};
         Scanner s=new Scanner(System.in);
@@ -58,7 +56,9 @@ public class Arrays {
             System.out.println();
         }
 
+        int[] arr1 = {1,1,2,3,4,5,5,5,7,2,2,3,4,4,6,6,8,8};
 
+        System.out.println(Arrays.toString(RepeatValuesAlternative(arr1)));
     }
 
     public static void MinandMax(int[] arr,int num){
@@ -75,4 +75,44 @@ public class Arrays {
         System.out.println(closest+" is the closest one to "+ num);
 
     }
+
+    public static void RepeatValues(int[] arr){
+
+
+        for (int i=0;i<arr.length;i++){
+            int temp = arr[i];
+            int count=0;
+            for (int j=0;j<arr.length;j++){
+                if (temp==arr[j]) count++;
+            }
+            if (count>1) System.out.println(temp);
+        }
+    }
+    public static int[] RepeatValuesAlternative(int[] arr){
+        int[] dublicate = new int[arr.length];
+        int start = 0;
+        for (int i=0;i<arr.length;i++){
+
+            for (int j=0;j<arr.length;j++){
+                if ( (i != j) && (arr[i]==arr[j]) && arr[i]%2==0){
+                    if (!isFind(dublicate,arr[i]) ) dublicate[start++]=arr[i];
+
+                }
+
+            }
+
+        }
+
+        return dublicate;
+    }
+
+    public static boolean isFind(int[] arr,int value){
+        for (int i:arr){
+            if (i==value){
+                return true;
+            }
+        }
+        return false;
+    }
+
 }
