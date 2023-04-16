@@ -59,6 +59,13 @@ public class ArraysPratik {
         int[] arr1 = {1,1,2,3,4,5,5,5,7,2,2,3,4,4,6,6,8,8};
 
         System.out.println(Arrays.toString(RepeatValuesAlternative(arr1)));
+
+
+        // Ödev1
+
+        System.out.print("Enter array size: ");
+        int size = s.nextInt();
+        System.out.println(Arrays.toString(sort(createArray(size))));
     }
 
     public static void MinandMax(int[] arr,int num){
@@ -113,6 +120,42 @@ public class ArraysPratik {
             }
         }
         return false;
+    }
+
+    public static int[] createArray(int size){
+        int[] arr = new int[size];
+        for (int i=0;i<size;i++){
+            Scanner s= new Scanner(System.in);
+            System.out.print("Enter number "+i+" : ");
+            int num = s.nextInt();
+            arr[i] = num;
+        }
+        return arr;
+    }
+
+    public static int[] sort(int[] arr){
+        int k=0;
+
+        for (int i=0;i<arr.length;i++){
+            k=arr[i];
+            int min =arr[i];
+            int arg = 0;
+            for (int j=i;j<arr.length;j++){
+                if (min>=arr[j]){
+                    min =arr[j];
+                    arg=j;
+                }
+
+            }
+            arr[arg] = k;
+            arr[i] = min;
+            System.out.println("m");
+
+
+
+        }
+
+        return arr;
     }
 
 }
