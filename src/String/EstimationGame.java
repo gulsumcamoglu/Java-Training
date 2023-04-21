@@ -3,6 +3,7 @@ import java.sql.SQLOutput;
 import java.util.*;
 public class EstimationGame {
     public static void main(String[] args) {
+        /**
         int rights=5;
         Scanner s = new Scanner(System.in);
         int num = (int)(Math.random()*101);
@@ -22,7 +23,29 @@ public class EstimationGame {
                     rights--;
                 }
             }
-        System.out.println("you fail!! num is "+num);
+        System.out.println("you fail!! num is "+num); */
 
+        System.out.println(isPalindrome("abbas"));
+        System.out.println(isPalindrome("kavak"));
+        System.out.println(isPalindrome("kayak"));
+
+    }
+
+    public static boolean isPalindrome(String str){
+        boolean isPalindrome=false;
+        int j=str.length()-1;
+        int i=0;
+
+            while(i<j){
+                if (str.charAt(i)==str.charAt(j)){
+                    isPalindrome=true;
+                }else{
+                    isPalindrome=false;
+                }
+                j--;
+                i++;
+            }
+
+        return isPalindrome;
     }
 }
