@@ -1,10 +1,33 @@
 package Arrays;
-import java.util.Arrays;
+import java.util.*;
 public class Transpose {
     public static void main(String[] args) {
-        int[][] arr = {{1,2,3},
+        int[][] arr2 = {{1,2,3},
                         {4,3}};
-        write(transpose(arr));
+        write(transpose(arr2));
+
+        Scanner s=new Scanner(System.in);
+        int size = s.nextInt();
+        int[] arr= new int[size];
+        for(int i=0;i<size;i++){
+            arr[i]=s.nextInt();
+        }
+        int count=0;
+        for(int i=0;i<arr.length;i++){
+
+            for(int j=1;j<arr.length+1;j++){
+                int sum=0;
+                for(int k=i;k<j;k++){
+                    sum = sum+arr[k];
+                }
+
+                if(sum<0) {
+                    count=count+1;
+                }
+            }
+        }
+
+        System.out.println(count);
 
     }
 
