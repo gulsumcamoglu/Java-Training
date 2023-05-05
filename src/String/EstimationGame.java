@@ -25,12 +25,20 @@ public class EstimationGame {
             }
         System.out.println("you fail!! num is "+num); */
 
-        System.out.println(isPalindrome("abbas"));
-        System.out.println(isPalindrome("kavak"));
-        System.out.println(isPalindrome("kayak"));
+        getSmallestAndLargest("welcometojava",3);
 
     }
+    public static void getSmallestAndLargest(String s, int k) {
+        String smallest = "";
+        String largest = "";
+        String[] stack = new String[s.length()/3];
 
+        for (int i=0;i<s.length();i=i+3){
+
+        }
+
+
+    }
     public static boolean isPalindrome(String str){
         boolean isPalindrome=false;
         int j=str.length()-1;

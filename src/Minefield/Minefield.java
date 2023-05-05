@@ -1,4 +1,5 @@
 package Minefield;
+import java.sql.SQLOutput;
 import java.util.*;
 public class Minefield {
     public static void main(String[] args) {
@@ -147,8 +148,10 @@ public class Minefield {
             }
             System.out.println();
         }
-
-        while (!isWin){
+        int numofNotBomb = row*column - (row*column)/4 ;
+        int count = 0;
+        while (!isWin && count != numofNotBomb){
+            count++;
             System.out.print("Enter row: ");
             int r=s.nextInt();
             System.out.print("Enter column: ");
@@ -171,6 +174,9 @@ public class Minefield {
                 }
             }
 
+        }
+        if (count == numofNotBomb) {
+            System.out.println("You win the game");
         }
 
 
