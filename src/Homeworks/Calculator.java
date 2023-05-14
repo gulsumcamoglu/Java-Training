@@ -4,7 +4,7 @@ public class Calculator {
     public static void main(String[] args) {
         int n1,n2,select;
         Scanner s = new Scanner(System.in);
-        System.out.print("First num: ");
+        System.out.print("Java102.First.First.First num: ");
         n1 = s.nextInt();
         System.out.print("Second num: ");
         n2 = s.nextInt();

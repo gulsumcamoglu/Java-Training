@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class EbobEkok {
     public static void main(String[] args) {
         Scanner s =  new Scanner(System.in);
-        System.out.print("First number: ");
+        System.out.print("Java102.First.First.First number: ");
         int first = s.nextInt();
         System.out.print("Second number: ");
         int sec = s.nextInt();
